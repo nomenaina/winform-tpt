@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pari_winform.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Pari_winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new rootContainer());
+            Application.Run(new RootContainer());
         }
     }
 }

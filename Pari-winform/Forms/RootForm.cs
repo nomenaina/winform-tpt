@@ -2,6 +2,7 @@
 using Pari_winform.Forms.ClientForms;
 using Pari_winform.Forms.PariForms;
 using Pari_winform.Forms.VideoForms;
+using Pari_winform.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,11 @@ using System.Windows.Forms;
 
 namespace Pari_winform
 {
-    public partial class rootContainer : Form
+    public partial class RootContainer : Form
     {
-        public rootContainer()
+        readonly NavigationUtils nav = new NavigationUtils();
+
+        public RootContainer()
         {
             InitializeComponent();
             CustomizeDesign();
@@ -70,19 +73,19 @@ namespace Pari_winform
 
         private void btnListClients_Click(object sender, EventArgs e)
         {
-            OpenChildPanel(new ListClientsForm());
+            nav.OpenChildPanel(new ListClientsForm(),childPanel);
             HideSubmenu();
         }
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            OpenChildPanel(new AddClientForm());
+            nav.OpenChildPanel(new AddClientForm(), childPanel);
             HideSubmenu();
         }
 
         private void btnImportClients_Click(object sender, EventArgs e)
         {
-            OpenChildPanel(new ImportClientForm());
+            nav.OpenChildPanel(new ImportClientForm(), childPanel);
             HideSubmenu();
         }
         #endregion
@@ -95,13 +98,13 @@ namespace Pari_winform
 
         private void btnListPari_Click(object sender, EventArgs e)
         {
-            OpenChildPanel(new ListParisForm());
+            nav.OpenChildPanel(new ListParisForm(), childPanel);
             HideSubmenu();
         }
 
         private void btnShowStats_Click(object sender, EventArgs e)
         {
-            OpenChildPanel(new ShowStatsForm());
+            nav.OpenChildPanel(new ShowStatsForm(), childPanel);
             HideSubmenu();
         }
         #endregion
@@ -114,13 +117,13 @@ namespace Pari_winform
 
         private void btnListVideos_Click(object sender, EventArgs e)
         {
-            OpenChildPanel(new ListVideosForm());
+            nav.OpenChildPanel(new ListVideosForm(), childPanel);
             HideSubmenu();
         }
 
         private void btnAddVideo_Click(object sender, EventArgs e)
         {
-            OpenChildPanel(new AddVideoForm());
+            nav.OpenChildPanel(new AddVideoForm(), childPanel);
             HideSubmenu();
         }
         #endregion
@@ -133,34 +136,20 @@ namespace Pari_winform
 
         private void btnListAdmins_Click(object sender, EventArgs e)
         {
-            OpenChildPanel(new ListAdminForm());
+            nav.OpenChildPanel(new ListAdminForm(), childPanel);
             HideSubmenu();
         }
 
         private void btnAddAdmin_Click(object sender, EventArgs e)
         {
-            OpenChildPanel(new AddAdminForm());
+            nav.OpenChildPanel(new AddAdminForm(), childPanel);
             HideSubmenu();
         }
         #endregion
 
-        private Form ActiveForm = null;
-        private void OpenChildPanel(Form childForm)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            if (ActiveForm != null)
-            {
-                ActiveForm.Close();
-            }
-            ActiveForm = childForm;
-
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-
-            childPanel.Controls.Add(childForm);
-            childPanel.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            //nav.loginForm.Show();
         }
     }
 }
