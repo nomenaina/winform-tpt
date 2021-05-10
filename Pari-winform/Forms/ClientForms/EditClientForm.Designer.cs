@@ -1,7 +1,7 @@
 ﻿
-namespace Pari_winform
+namespace Pari_winform.Forms.ClientForms
 {
-    partial class ListClientsForm
+    partial class EditClientForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@ namespace Pari_winform
         private void InitializeComponent()
         {
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnNavigateToEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClose
@@ -43,38 +42,26 @@ namespace Pari_winform
             this.btnClose.Location = new System.Drawing.Point(620, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(34, 23);
-            this.btnClose.TabIndex = 2;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnNavigateToEdit
-            // 
-            this.btnNavigateToEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNavigateToEdit.Location = new System.Drawing.Point(12, 347);
-            this.btnNavigateToEdit.Name = "btnNavigateToEdit";
-            this.btnNavigateToEdit.Size = new System.Drawing.Size(115, 23);
-            this.btnNavigateToEdit.TabIndex = 3;
-            this.btnNavigateToEdit.Text = "Navigate to edit";
-            this.btnNavigateToEdit.UseVisualStyleBackColor = true;
-            this.btnNavigateToEdit.Click += new System.EventHandler(this.btnNavigateToEdit_Click);
-            // 
-            // ListClientsForm
+            // EditClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(666, 382);
-            this.Controls.Add(this.btnNavigateToEdit);
             this.Controls.Add(this.btnClose);
-            this.Name = "ListClientsForm";
-            this.Text = " ";
+            this.Name = "EditClientForm";
+            this.Text = "EditClientForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnNavigateToEdit;
     }
 }

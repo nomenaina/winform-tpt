@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Pari_winform.Forms.ClientForms;
+using Pari_winform.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace Pari_winform
 {
     public partial class ListClientsForm : Form
     {
+        NavigationUtils nav = new NavigationUtils();
         public ListClientsForm()
         {
             InitializeComponent();
@@ -22,9 +25,11 @@ namespace Pari_winform
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnNavigateToEdit_Click(object sender, EventArgs e)
         {
-
+            Panel parentPanel = (Panel)this.Parent;
+            nav.OpenChildPanel(new EditClientForm(), parentPanel);
+            this.Close();
         }
     }
 }

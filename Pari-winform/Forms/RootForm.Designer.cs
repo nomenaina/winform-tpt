@@ -1,7 +1,7 @@
 ﻿
 namespace Pari_winform
 {
-    partial class rootContainer
+    partial class RootContainer
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -29,7 +29,7 @@ namespace Pari_winform
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rootContainer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootContainer));
             this.sideMenuPanel = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelSubmenuAdministrator = new System.Windows.Forms.Panel();
@@ -103,6 +103,7 @@ namespace Pari_winform
             this.btnLogout.Text = "Déconnexion";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panelSubmenuAdministrator
             // 
@@ -446,7 +447,7 @@ namespace Pari_winform
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // rootContainer
+            // RootContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -458,7 +459,7 @@ namespace Pari_winform
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "rootContainer";
+            this.Name = "RootContainer";
             this.Text = "Sport wager";
             this.sideMenuPanel.ResumeLayout(false);
             this.panelSubmenuAdministrator.ResumeLayout(false);

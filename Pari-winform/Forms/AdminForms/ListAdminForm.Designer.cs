@@ -30,6 +30,7 @@ namespace Pari_winform.Forms.AdminForms
         private void InitializeComponent()
         {
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnNavigateToEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClose
@@ -47,12 +48,24 @@ namespace Pari_winform.Forms.AdminForms
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnNavigateToEdit
+            // 
+            this.btnNavigateToEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNavigateToEdit.Location = new System.Drawing.Point(12, 347);
+            this.btnNavigateToEdit.Name = "btnNavigateToEdit";
+            this.btnNavigateToEdit.Size = new System.Drawing.Size(125, 23);
+            this.btnNavigateToEdit.TabIndex = 4;
+            this.btnNavigateToEdit.Text = "Navigate to editForm";
+            this.btnNavigateToEdit.UseVisualStyleBackColor = true;
+            this.btnNavigateToEdit.Click += new System.EventHandler(this.btnNavigateToEdit_Click);
+            // 
             // ListAdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(666, 382);
+            this.Controls.Add(this.btnNavigateToEdit);
             this.Controls.Add(this.btnClose);
             this.Name = "ListAdminForm";
             this.Text = "ListAdminForm";
@@ -63,5 +76,6 @@ namespace Pari_winform.Forms.AdminForms
         #endregion
 
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnNavigateToEdit;
     }
 }
