@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Pari_winform
 {
-    public partial class Form1 : Form
+    public partial class AddClientForm : Form
     {
-        public Form1()
+        public AddClientForm()
         {
             InitializeComponent();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -46,14 +46,98 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\AdminForms\AddAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\AdminForms\AddAdminForm.Designer.cs">
+      <DependentUpon>AddAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ListAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\ListAdminForm.Designer.cs">
+      <DependentUpon>ListAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientForms\AddClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientForms\AddClientForm.Designer.cs">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientForms\ImportClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientForms\ImportClientForm.Designer.cs">
+      <DependentUpon>ImportClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PariForms\ListParisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PariForms\ListParisForm.Designer.cs">
+      <DependentUpon>ListParisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PariForms\ShowStatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PariForms\ShowStatsForm.Designer.cs">
+      <DependentUpon>ShowStatsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RootForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RootForm.Designer.cs">
+      <DependentUpon>RootForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientForms\ListClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientForms\ListClientsForm.Designer.cs">
+      <DependentUpon>ListClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VideoForms\AddVideoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VideoForms\AddVideoForm.Designer.cs">
+      <DependentUpon>AddVideoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VideoForms\ListVideosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VideoForms\ListVideosForm.Designer.cs">
+      <DependentUpon>ListVideosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AdminForms\AddAdminForm.resx">
+      <DependentUpon>AddAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\ListAdminForm.resx">
+      <DependentUpon>ListAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientForms\AddClientForm.resx">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientForms\ImportClientForm.resx">
+      <DependentUpon>ImportClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PariForms\ListParisForm.resx">
+      <DependentUpon>ListParisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PariForms\ShowStatsForm.resx">
+      <DependentUpon>ShowStatsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RootForm.resx">
+      <DependentUpon>RootForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientForms\ListClientsForm.resx">
+      <DependentUpon>ListClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VideoForms\AddVideoForm.resx">
+      <DependentUpon>AddVideoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VideoForms\ListVideosForm.resx">
+      <DependentUpon>ListVideosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,5 +160,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{c02b2a8e-5c69-4681-9f65-c1ba088f7c71}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
