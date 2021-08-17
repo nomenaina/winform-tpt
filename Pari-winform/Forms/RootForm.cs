@@ -3,6 +3,7 @@ using Pari_winform.Forms.ClientForms;
 using Pari_winform.Forms.PariForms;
 using Pari_winform.Forms.VideoForms;
 using Pari_winform.Utils;
+using Services.Controllers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -151,5 +152,12 @@ namespace Pari_winform
         {
             //nav.loginForm.Show();
         }
+
+        private async void LoginBtn_Click(object sender, EventArgs e)
+        {
+            var response = await AuthContoller.Login("rafahrafanomezantsoa@gmail.com", "abc123");
+            OutputL.Text = response;
+        }       
     }
 }
+      

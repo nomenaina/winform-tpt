@@ -54,6 +54,8 @@ namespace Pari_winform
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.childPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LoginBtn = new System.Windows.Forms.Button();
+            this.OutputL = new System.Windows.Forms.Label();
             this.sideMenuPanel.SuspendLayout();
             this.panelSubmenuAdministrator.SuspendLayout();
             this.panelSubmenuVideo.SuspendLayout();
@@ -61,6 +63,7 @@ namespace Pari_winform
             this.panelSubmenuClients.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.bottomPanel.SuspendLayout();
             this.childPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -394,6 +397,7 @@ namespace Pari_winform
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.LoginBtn);
             this.panelLogo.Controls.Add(this.pictureBox2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -406,10 +410,10 @@ namespace Pari_winform
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(5, 24);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(227, 77);
+            this.pictureBox2.Size = new System.Drawing.Size(227, 56);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -417,6 +421,7 @@ namespace Pari_winform
             // bottomPanel
             // 
             this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.bottomPanel.Controls.Add(this.OutputL);
             this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bottomPanel.Location = new System.Drawing.Point(251, 421);
             this.bottomPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -447,6 +452,27 @@ namespace Pari_winform
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // LoginBtn
+            // 
+            this.LoginBtn.BackColor = System.Drawing.Color.Black;
+            this.LoginBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.LoginBtn.Location = new System.Drawing.Point(0, 55);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.Size = new System.Drawing.Size(234, 45);
+            this.LoginBtn.TabIndex = 11;
+            this.LoginBtn.Text = "Connection";
+            this.LoginBtn.UseVisualStyleBackColor = false;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
+            // 
+            // OutputL
+            // 
+            this.OutputL.AutoSize = true;
+            this.OutputL.Location = new System.Drawing.Point(309, 33);
+            this.OutputL.Name = "OutputL";
+            this.OutputL.Size = new System.Drawing.Size(57, 17);
+            this.OutputL.TabIndex = 0;
+            this.OutputL.Text = "Nothing";
+            // 
             // RootContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -468,6 +494,8 @@ namespace Pari_winform
             this.panelSubmenuClients.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.bottomPanel.ResumeLayout(false);
+            this.bottomPanel.PerformLayout();
             this.childPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -500,5 +528,7 @@ namespace Pari_winform
         private System.Windows.Forms.Button btnAddAdmin;
         private System.Windows.Forms.Button btnListAdmins;
         private System.Windows.Forms.Button btnAdminMenu;
+        private System.Windows.Forms.Button LoginBtn;
+        private System.Windows.Forms.Label OutputL;
     }
 }
