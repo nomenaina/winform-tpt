@@ -62,9 +62,9 @@ namespace Pari_winform
             this.Login_intro = new System.Windows.Forms.Label();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.bottomPanel = new System.Windows.Forms.Panel();
-            this.status = new System.Windows.Forms.Label();
-            this.hints = new System.Windows.Forms.Panel();
             this.OutputL = new System.Windows.Forms.Label();
+            this.hints = new System.Windows.Forms.Panel();
+            this.status = new System.Windows.Forms.Label();
             this.sideMenuPanel.SuspendLayout();
             this.panelSubmenuAdministrator.SuspendLayout();
             this.panelSubmenuVideo.SuspendLayout();
@@ -462,7 +462,7 @@ namespace Pari_winform
             // 
             this.Forgotten.BackColor = System.Drawing.SystemColors.Control;
             this.Forgotten.FlatAppearance.BorderSize = 0;
-            this.Forgotten.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Forgotten.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Forgotten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.Forgotten.Location = new System.Drawing.Point(275, 299);
             this.Forgotten.Name = "Forgotten";
@@ -542,7 +542,7 @@ namespace Pari_winform
             // 
             this.LoginBtn.BackColor = System.Drawing.Color.Gray;
             this.LoginBtn.Enabled = false;
-            this.LoginBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.Location = new System.Drawing.Point(91, 299);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(157, 43);
@@ -557,22 +557,21 @@ namespace Pari_winform
             this.bottomPanel.Controls.Add(this.OutputL);
             this.bottomPanel.Controls.Add(this.hints);
             this.bottomPanel.Controls.Add(this.status);
-            this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bottomPanel.Location = new System.Drawing.Point(251, 0);
+            this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bottomPanel.Location = new System.Drawing.Point(251, 487);
             this.bottomPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Size = new System.Drawing.Size(557, 34);
-            this.bottomPanel.TabIndex = 3;
+            this.bottomPanel.TabIndex = 19;
             // 
-            // status
+            // OutputL
             // 
-            this.status.AutoSize = true;
-            this.status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status.Location = new System.Drawing.Point(462, 0);
-            this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(73, 15);
-            this.status.TabIndex = 0;
-            this.status.Text = "Déconnecté";
+            this.OutputL.AutoSize = true;
+            this.OutputL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OutputL.Location = new System.Drawing.Point(-2, 9);
+            this.OutputL.Name = "OutputL";
+            this.OutputL.Size = new System.Drawing.Size(0, 18);
+            this.OutputL.TabIndex = 2;
             // 
             // hints
             // 
@@ -583,14 +582,15 @@ namespace Pari_winform
             this.hints.Size = new System.Drawing.Size(21, 34);
             this.hints.TabIndex = 1;
             // 
-            // OutputL
+            // status
             // 
-            this.OutputL.AutoSize = true;
-            this.OutputL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OutputL.Location = new System.Drawing.Point(-2, 9);
-            this.OutputL.Name = "OutputL";
-            this.OutputL.Size = new System.Drawing.Size(0, 18);
-            this.OutputL.TabIndex = 2;
+            this.status.AutoSize = true;
+            this.status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status.Location = new System.Drawing.Point(462, 0);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(73, 15);
+            this.status.TabIndex = 0;
+            this.status.Text = "Déconnecté";
             // 
             // RootContainer
             // 
@@ -661,8 +661,8 @@ namespace Pari_winform
         private System.Windows.Forms.Button Forgotten;
         private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.Panel bottomPanel;
-        private System.Windows.Forms.Label status;
         private System.Windows.Forms.Label OutputL;
         private System.Windows.Forms.Panel hints;
+        private System.Windows.Forms.Label status;
     }
 }

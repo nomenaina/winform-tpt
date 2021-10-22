@@ -14,9 +14,7 @@ namespace Services.Controllers
 {
     public class AuthContoller
     {
-        private static string errorLabel = "";
         private static readonly string baseURL = "https://backoffice-support-tpt.herokuapp.com/api/";
-        private static string accesToken;
 
         private static readonly HttpClient httpClient;
         static AuthContoller ()
@@ -30,7 +28,6 @@ namespace Services.Controllers
             var lr = new LoginResponse();
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                errorLabel = "Please fill in the missing field(s)";
                 lr.status_code = "400";
                 return lr;
             }

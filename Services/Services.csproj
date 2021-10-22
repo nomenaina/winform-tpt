@@ -57,7 +57,9 @@
   <ItemGroup>
     <Compile Include="Controllers\AuthContoller.cs" />
     <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Global.cs" />
     <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\ClientResponse.cs" />
     <Compile Include="Models\LoginResponse.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

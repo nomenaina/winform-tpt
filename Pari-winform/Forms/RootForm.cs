@@ -3,6 +3,7 @@ using Pari_winform.Forms.ClientForms;
 using Pari_winform.Forms.PariForms;
 using Pari_winform.Forms.VideoForms;
 using Pari_winform.Utils;
+using Services;
 using Services.Controllers;
 using System;
 using System.Collections.Generic;
@@ -168,6 +169,10 @@ namespace Pari_winform
                     status.Text = "Connectés";
                     LoginBtn.Enabled = true;
                     hints.BackColor = Color.Chartreuse;
+
+                    Global._Access_t = response.access_token;
+                    Global._Refresh_t = response.refresh_token;
+
                     OutputL.Text = response.status_code;
                 }
                 else if(response != null)
@@ -208,6 +213,7 @@ namespace Pari_winform
                 LoginBtn.Enabled = false;
             }
         }
+
     }
 }
       
