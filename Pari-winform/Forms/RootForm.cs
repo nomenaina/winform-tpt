@@ -155,9 +155,59 @@ namespace Pari_winform
 
         private async void LoginBtn_Click(object sender, EventArgs e)
         {
-            var response = await AuthContoller.Login("rafahrafanomezantsoa@gmail.com", "abc123");
-            OutputL.Text = response;
-        }       
+            LoginBtn.Enabled = false;
+            OutputL.Text = "Connection en cours...";
+
+            if (username.Text != "" && password.Text != "")
+            {
+                //var response = await AuthContoller.Login("rafahrafanomezantsoa@gmail.com", "abc123");
+                var response = await AuthContoller.Login(username.Text, password.Text);
+                
+                if (response != null && response.status_code == "OK")
+                {
+                    status.Text = "Connectés";
+                    LoginBtn.Enabled = true;
+                    hints.BackColor = Color.Chartreuse;
+                    OutputL.Text = response.status_code;
+                }
+                else if(response != null)
+                {
+                    LoginBtn.Enabled = true;
+                    OutputL.Text = response.status_code;
+                }
+
+
+            }
+            else
+            {
+                OutputL.Text = "Erreur fatal!";
+            }
+            
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+            if (password.Text.Length > 0 && username.Text.Length > 0)
+            {
+                LoginBtn.Enabled = true;
+            }
+            else
+            {
+                LoginBtn.Enabled = false;
+            }
+        }
+
+        private void username_TextChanged(object sender, EventArgs e)
+        {
+            if (password.Text.Length > 0 && username.Text.Length > 0)
+            {
+                LoginBtn.Enabled = true;
+            }
+            else
+            {
+                LoginBtn.Enabled = false;
+            }
+        }
     }
 }
       

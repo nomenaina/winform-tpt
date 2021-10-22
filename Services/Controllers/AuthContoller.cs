@@ -25,12 +25,14 @@ namespace Services.Controllers
         }
 
 
-        public static async Task<string> Login(string email, string password)
+        public static async Task<LoginResponse> Login(string email, string password)
         {
+            var lr = new LoginResponse();
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 errorLabel = "Please fill in the missing field(s)";
-                return "400";
+                lr.status_code = "400";
+                return lr;
             }
             var creds = new { email = email, password = password };
             using (var client = new HttpClient())
@@ -39,18 +41,17 @@ namespace Services.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "");
                 HttpResponseMessage Res = await client.PostAsJsonAsync("auth/login/", creds);
+                lr.status_code = Res.StatusCode.ToString();
+
                 if (Res.IsSuccessStatusCode)
                 {
                     var result = Res.Content.ReadAsStringAsync().Result;
                     var jsonData = (JObject)JsonConvert.DeserializeObject(result);
-                    var lr = new LoginResponse();
                     lr.access_token = jsonData["data"][0]["access_token"].Value<string>();
                     lr.refresh_token = jsonData["data"][0]["refresh_token"].Value<string>();
-                    return lr.access_token;
-                    ;
                 }
-                else
-                    return Res.StatusCode.ToString();
+                return lr;
+
             }
         }
 

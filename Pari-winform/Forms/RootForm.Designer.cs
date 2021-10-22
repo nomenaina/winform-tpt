@@ -51,10 +51,19 @@ namespace Pari_winform
             this.btnMenuClients = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bottomPanel = new System.Windows.Forms.Panel();
             this.childPanel = new System.Windows.Forms.Panel();
+            this.Forgotten = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.password = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.username = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Login_intro = new System.Windows.Forms.Label();
             this.LoginBtn = new System.Windows.Forms.Button();
+            this.bottomPanel = new System.Windows.Forms.Panel();
+            this.status = new System.Windows.Forms.Label();
+            this.hints = new System.Windows.Forms.Panel();
             this.OutputL = new System.Windows.Forms.Label();
             this.sideMenuPanel.SuspendLayout();
             this.panelSubmenuAdministrator.SuspendLayout();
@@ -63,9 +72,12 @@ namespace Pari_winform
             this.panelSubmenuClients.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.bottomPanel.SuspendLayout();
             this.childPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.bottomPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideMenuPanel
@@ -97,6 +109,7 @@ namespace Pari_winform
             this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Location = new System.Drawing.Point(0, 657);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogout.Name = "btnLogout";
@@ -127,6 +140,7 @@ namespace Pari_winform
             this.btnAddAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAddAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAddAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAdmin.Location = new System.Drawing.Point(0, 40);
             this.btnAddAdmin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAddAdmin.Name = "btnAddAdmin";
@@ -145,6 +159,7 @@ namespace Pari_winform
             this.btnListAdmins.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnListAdmins.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnListAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListAdmins.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListAdmins.Location = new System.Drawing.Point(0, 0);
             this.btnListAdmins.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnListAdmins.Name = "btnListAdmins";
@@ -164,6 +179,7 @@ namespace Pari_winform
             this.btnAdminMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdminMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdminMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdminMenu.Location = new System.Drawing.Point(0, 527);
             this.btnAdminMenu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAdminMenu.Name = "btnAdminMenu";
@@ -194,6 +210,7 @@ namespace Pari_winform
             this.btnAddVideo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAddVideo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAddVideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddVideo.Location = new System.Drawing.Point(0, 40);
             this.btnAddVideo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAddVideo.Name = "btnAddVideo";
@@ -212,6 +229,7 @@ namespace Pari_winform
             this.btnListVideos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnListVideos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnListVideos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListVideos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListVideos.Location = new System.Drawing.Point(0, 0);
             this.btnListVideos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnListVideos.Name = "btnListVideos";
@@ -231,6 +249,7 @@ namespace Pari_winform
             this.btnMenuVideos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnMenuVideos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnMenuVideos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuVideos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuVideos.Location = new System.Drawing.Point(0, 397);
             this.btnMenuVideos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnMenuVideos.Name = "btnMenuVideos";
@@ -261,6 +280,7 @@ namespace Pari_winform
             this.btnShowStats.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnShowStats.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnShowStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowStats.Location = new System.Drawing.Point(0, 40);
             this.btnShowStats.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnShowStats.Name = "btnShowStats";
@@ -279,6 +299,7 @@ namespace Pari_winform
             this.btnListPari.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnListPari.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnListPari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListPari.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListPari.Location = new System.Drawing.Point(0, 0);
             this.btnListPari.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnListPari.Name = "btnListPari";
@@ -298,6 +319,7 @@ namespace Pari_winform
             this.btnMenuPari.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnMenuPari.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnMenuPari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuPari.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuPari.Location = new System.Drawing.Point(0, 269);
             this.btnMenuPari.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnMenuPari.Name = "btnMenuPari";
@@ -329,6 +351,7 @@ namespace Pari_winform
             this.btnImportClients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnImportClients.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnImportClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportClients.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportClients.Location = new System.Drawing.Point(0, 80);
             this.btnImportClients.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnImportClients.Name = "btnImportClients";
@@ -347,6 +370,7 @@ namespace Pari_winform
             this.btnAddClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAddClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddClient.Location = new System.Drawing.Point(0, 40);
             this.btnAddClient.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAddClient.Name = "btnAddClient";
@@ -365,6 +389,7 @@ namespace Pari_winform
             this.btnListClients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnListClients.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnListClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListClients.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListClients.Location = new System.Drawing.Point(0, 0);
             this.btnListClients.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnListClients.Name = "btnListClients";
@@ -384,6 +409,7 @@ namespace Pari_winform
             this.btnMenuClients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnMenuClients.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnMenuClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuClients.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuClients.Location = new System.Drawing.Point(0, 100);
             this.btnMenuClients.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnMenuClients.Name = "btnMenuClients";
@@ -397,7 +423,6 @@ namespace Pari_winform
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.LoginBtn);
             this.panelLogo.Controls.Add(this.pictureBox2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -408,79 +433,173 @@ namespace Pari_winform
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(227, 56);
+            this.pictureBox2.Size = new System.Drawing.Size(234, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // childPanel
+            // 
+            this.childPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.childPanel.Controls.Add(this.Forgotten);
+            this.childPanel.Controls.Add(this.panel2);
+            this.childPanel.Controls.Add(this.panel1);
+            this.childPanel.Controls.Add(this.Login_intro);
+            this.childPanel.Controls.Add(this.LoginBtn);
+            this.childPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.childPanel.Location = new System.Drawing.Point(251, 0);
+            this.childPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.childPanel.Name = "childPanel";
+            this.childPanel.Size = new System.Drawing.Size(557, 521);
+            this.childPanel.TabIndex = 2;
+            // 
+            // Forgotten
+            // 
+            this.Forgotten.BackColor = System.Drawing.SystemColors.Control;
+            this.Forgotten.FlatAppearance.BorderSize = 0;
+            this.Forgotten.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Forgotten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.Forgotten.Location = new System.Drawing.Point(275, 299);
+            this.Forgotten.Name = "Forgotten";
+            this.Forgotten.Size = new System.Drawing.Size(205, 43);
+            this.Forgotten.TabIndex = 17;
+            this.Forgotten.Text = "Mot de passe oublié ?";
+            this.Forgotten.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.password);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Location = new System.Drawing.Point(1, 211);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(557, 42);
+            this.panel2.TabIndex = 16;
+            // 
+            // password
+            // 
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Location = new System.Drawing.Point(90, 7);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(420, 26);
+            this.password.TabIndex = 1;
+            this.password.UseSystemPasswordChar = true;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(20, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.username);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(1, 147);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(557, 42);
+            this.panel1.TabIndex = 15;
+            // 
+            // username
+            // 
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(90, 7);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(420, 26);
+            this.username.TabIndex = 1;
+            this.username.TextChanged += new System.EventHandler(this.username_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(20, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Login_intro
+            // 
+            this.Login_intro.AutoSize = true;
+            this.Login_intro.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_intro.Location = new System.Drawing.Point(7, 64);
+            this.Login_intro.Name = "Login_intro";
+            this.Login_intro.Size = new System.Drawing.Size(528, 39);
+            this.Login_intro.TabIndex = 13;
+            this.Login_intro.Text = "Connectez-vous à votre compte";
+            // 
+            // LoginBtn
+            // 
+            this.LoginBtn.BackColor = System.Drawing.Color.Gray;
+            this.LoginBtn.Enabled = false;
+            this.LoginBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.Location = new System.Drawing.Point(91, 299);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.Size = new System.Drawing.Size(157, 43);
+            this.LoginBtn.TabIndex = 12;
+            this.LoginBtn.Text = "Login";
+            this.LoginBtn.UseVisualStyleBackColor = false;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // bottomPanel
             // 
             this.bottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.bottomPanel.Controls.Add(this.OutputL);
-            this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomPanel.Location = new System.Drawing.Point(251, 421);
+            this.bottomPanel.Controls.Add(this.hints);
+            this.bottomPanel.Controls.Add(this.status);
+            this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bottomPanel.Location = new System.Drawing.Point(251, 0);
             this.bottomPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(682, 100);
-            this.bottomPanel.TabIndex = 1;
+            this.bottomPanel.Size = new System.Drawing.Size(557, 34);
+            this.bottomPanel.TabIndex = 3;
             // 
-            // childPanel
+            // status
             // 
-            this.childPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.childPanel.Controls.Add(this.pictureBox1);
-            this.childPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.childPanel.Location = new System.Drawing.Point(251, 0);
-            this.childPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.childPanel.Name = "childPanel";
-            this.childPanel.Size = new System.Drawing.Size(682, 421);
-            this.childPanel.TabIndex = 2;
+            this.status.AutoSize = true;
+            this.status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status.Location = new System.Drawing.Point(462, 0);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(73, 15);
+            this.status.TabIndex = 0;
+            this.status.Text = "Déconnecté";
             // 
-            // pictureBox1
+            // hints
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(73, 68);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(524, 300);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // LoginBtn
-            // 
-            this.LoginBtn.BackColor = System.Drawing.Color.Black;
-            this.LoginBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.LoginBtn.Location = new System.Drawing.Point(0, 55);
-            this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(234, 45);
-            this.LoginBtn.TabIndex = 11;
-            this.LoginBtn.Text = "Connection";
-            this.LoginBtn.UseVisualStyleBackColor = false;
-            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
+            this.hints.BackColor = System.Drawing.Color.OrangeRed;
+            this.hints.Dock = System.Windows.Forms.DockStyle.Right;
+            this.hints.Location = new System.Drawing.Point(536, 0);
+            this.hints.Name = "hints";
+            this.hints.Size = new System.Drawing.Size(21, 34);
+            this.hints.TabIndex = 1;
             // 
             // OutputL
             // 
             this.OutputL.AutoSize = true;
-            this.OutputL.Location = new System.Drawing.Point(309, 33);
+            this.OutputL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OutputL.Location = new System.Drawing.Point(-2, 9);
             this.OutputL.Name = "OutputL";
-            this.OutputL.Size = new System.Drawing.Size(57, 17);
-            this.OutputL.TabIndex = 0;
-            this.OutputL.Text = "Nothing";
+            this.OutputL.Size = new System.Drawing.Size(0, 18);
+            this.OutputL.TabIndex = 2;
             // 
             // RootContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(933, 521);
-            this.Controls.Add(this.childPanel);
+            this.ClientSize = new System.Drawing.Size(808, 521);
             this.Controls.Add(this.bottomPanel);
+            this.Controls.Add(this.childPanel);
             this.Controls.Add(this.sideMenuPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Transparent;
@@ -494,10 +613,16 @@ namespace Pari_winform
             this.panelSubmenuClients.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.childPanel.ResumeLayout(false);
+            this.childPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bottomPanel.ResumeLayout(false);
             this.bottomPanel.PerformLayout();
-            this.childPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -519,16 +644,25 @@ namespace Pari_winform
         private System.Windows.Forms.Button btnShowStats;
         private System.Windows.Forms.Button btnListPari;
         private System.Windows.Forms.Button btnMenuPari;
-        private System.Windows.Forms.Panel bottomPanel;
         private System.Windows.Forms.Panel childPanel;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panelSubmenuAdministrator;
         private System.Windows.Forms.Button btnAddAdmin;
         private System.Windows.Forms.Button btnListAdmins;
         private System.Windows.Forms.Button btnAdminMenu;
+        private System.Windows.Forms.Label Login_intro;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.Button Forgotten;
         private System.Windows.Forms.Button LoginBtn;
+        private System.Windows.Forms.Panel bottomPanel;
+        private System.Windows.Forms.Label status;
         private System.Windows.Forms.Label OutputL;
+        private System.Windows.Forms.Panel hints;
     }
 }
