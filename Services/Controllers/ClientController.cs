@@ -57,5 +57,41 @@ namespace Services.Controllers
             }
 
         }
+
+        public static async Task<ClientResponse> EditListClient(int page, int limit)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseURL);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Global._Access_t);
+                HttpResponseMessage Res = await client.GetAsync("users?page=" + page + "&limit=" + limit);
+                var status_code = Res.StatusCode.ToString();
+                var clients = new List<Client>();
+                if (Res.IsSuccessStatusCode)
+                {
+                    var result = Res.Content.ReadAsStringAsync().Result;
+                    var jsonData = (JObject)JsonConvert.DeserializeObject(result);
+                    foreach (var x in jsonData["data"])
+                    {
+                        clients.Add(new Client
+                        {
+                            id = x["id"].Value<string>(),
+                            firstname = x["firstname"].Value<string>(),
+                            lastname = x["lastname"].Value<string>(),
+                            betcredit = x["betcredit"].Value<float>(),
+                            email = x["email"].Value<string>(),
+                            phone = x["phone"].Value<string>()
+                        }
+                        );
+
+                    }
+                }
+
+                return new ClientResponse { status_code = status_code, clients = clients };
+
+            }
+
+        }
     }
 }

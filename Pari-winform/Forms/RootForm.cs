@@ -162,7 +162,7 @@ namespace Pari_winform
             if (username.Text != "" && password.Text != "")
             {
                 //var response = await AuthContoller.Login("rafahrafanomezantsoa@gmail.com", "abc123");
-                var response = await AuthContoller.Login(username.Text, password.Text);
+                var response = await AuthController.Login(username.Text, password.Text);
                 
                 if (response != null && response.status_code == "OK")
                 {

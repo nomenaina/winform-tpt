@@ -12,12 +12,12 @@ using System.Web.Http;
 
 namespace Services.Controllers
 {
-    public class AuthContoller
+    public class AuthController
     {
         private static readonly string baseURL = "https://backoffice-support-tpt.herokuapp.com/api/";
 
         private static readonly HttpClient httpClient;
-        static AuthContoller ()
+        static AuthController ()
         {
             httpClient = new HttpClient();
         }
