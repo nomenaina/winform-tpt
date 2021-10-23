@@ -43,8 +43,8 @@ namespace Pari_winform.Forms.PariForms
         private async void ListParisForm_Load(object sender, EventArgs e)
         {
             StyleDatagridview();
-            //var response = await PariController.GetListPari(77, init_page, 10);
-            //dataGridView1.DataSource = response.paris;
+            var response = await PariController.GetListPari(162485951146477760, init_page, 10);
+            dataGridView1.DataSource = response.paris;
         }
 
         private async void sv_lst_client_Click(object sender, EventArgs e)

@@ -33,7 +33,6 @@ namespace Pari_winform
             this.sideMenuPanel = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelSubmenuAdministrator = new System.Windows.Forms.Panel();
-            this.btnAddAdmin = new System.Windows.Forms.Button();
             this.btnListAdmins = new System.Windows.Forms.Button();
             this.btnAdminMenu = new System.Windows.Forms.Button();
             this.panelSubmenuVideo = new System.Windows.Forms.Panel();
@@ -41,7 +40,6 @@ namespace Pari_winform
             this.btnListVideos = new System.Windows.Forms.Button();
             this.btnMenuVideos = new System.Windows.Forms.Button();
             this.panelSubmenuPari = new System.Windows.Forms.Panel();
-            this.btnShowStats = new System.Windows.Forms.Button();
             this.btnListPari = new System.Windows.Forms.Button();
             this.btnMenuPari = new System.Windows.Forms.Button();
             this.panelSubmenuClients = new System.Windows.Forms.Panel();
@@ -65,6 +63,7 @@ namespace Pari_winform
             this.OutputL = new System.Windows.Forms.Label();
             this.hints = new System.Windows.Forms.Panel();
             this.status = new System.Windows.Forms.Label();
+            this.btnAddAdmin = new System.Windows.Forms.Button();
             this.sideMenuPanel.SuspendLayout();
             this.panelSubmenuAdministrator.SuspendLayout();
             this.panelSubmenuVideo.SuspendLayout();
@@ -110,7 +109,7 @@ namespace Pari_winform
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(0, 657);
+            this.btnLogout.Location = new System.Drawing.Point(0, 615);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -127,30 +126,11 @@ namespace Pari_winform
             this.panelSubmenuAdministrator.Controls.Add(this.btnAddAdmin);
             this.panelSubmenuAdministrator.Controls.Add(this.btnListAdmins);
             this.panelSubmenuAdministrator.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenuAdministrator.Location = new System.Drawing.Point(0, 572);
+            this.panelSubmenuAdministrator.Location = new System.Drawing.Point(0, 530);
             this.panelSubmenuAdministrator.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelSubmenuAdministrator.Name = "panelSubmenuAdministrator";
             this.panelSubmenuAdministrator.Size = new System.Drawing.Size(234, 85);
             this.panelSubmenuAdministrator.TabIndex = 9;
-            // 
-            // btnAddAdmin
-            // 
-            this.btnAddAdmin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddAdmin.FlatAppearance.BorderSize = 0;
-            this.btnAddAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAddAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAddAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAdmin.Location = new System.Drawing.Point(0, 40);
-            this.btnAddAdmin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAddAdmin.Name = "btnAddAdmin";
-            this.btnAddAdmin.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
-            this.btnAddAdmin.Size = new System.Drawing.Size(234, 40);
-            this.btnAddAdmin.TabIndex = 1;
-            this.btnAddAdmin.Text = "Ajouter un administrateur";
-            this.btnAddAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddAdmin.UseVisualStyleBackColor = true;
-            this.btnAddAdmin.Click += new System.EventHandler(this.btnAddAdmin_Click);
             // 
             // btnListAdmins
             // 
@@ -180,7 +160,7 @@ namespace Pari_winform
             this.btnAdminMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdminMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdminMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdminMenu.Location = new System.Drawing.Point(0, 527);
+            this.btnAdminMenu.Location = new System.Drawing.Point(0, 485);
             this.btnAdminMenu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAdminMenu.Name = "btnAdminMenu";
             this.btnAdminMenu.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -197,7 +177,7 @@ namespace Pari_winform
             this.panelSubmenuVideo.Controls.Add(this.btnAddVideo);
             this.panelSubmenuVideo.Controls.Add(this.btnListVideos);
             this.panelSubmenuVideo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenuVideo.Location = new System.Drawing.Point(0, 442);
+            this.panelSubmenuVideo.Location = new System.Drawing.Point(0, 400);
             this.panelSubmenuVideo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelSubmenuVideo.Name = "panelSubmenuVideo";
             this.panelSubmenuVideo.Size = new System.Drawing.Size(234, 85);
@@ -250,7 +230,7 @@ namespace Pari_winform
             this.btnMenuVideos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnMenuVideos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuVideos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuVideos.Location = new System.Drawing.Point(0, 397);
+            this.btnMenuVideos.Location = new System.Drawing.Point(0, 355);
             this.btnMenuVideos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnMenuVideos.Name = "btnMenuVideos";
             this.btnMenuVideos.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -264,33 +244,13 @@ namespace Pari_winform
             // panelSubmenuPari
             // 
             this.panelSubmenuPari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelSubmenuPari.Controls.Add(this.btnShowStats);
             this.panelSubmenuPari.Controls.Add(this.btnListPari);
             this.panelSubmenuPari.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubmenuPari.Location = new System.Drawing.Point(0, 314);
             this.panelSubmenuPari.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelSubmenuPari.Name = "panelSubmenuPari";
-            this.panelSubmenuPari.Size = new System.Drawing.Size(234, 83);
+            this.panelSubmenuPari.Size = new System.Drawing.Size(234, 41);
             this.panelSubmenuPari.TabIndex = 4;
-            // 
-            // btnShowStats
-            // 
-            this.btnShowStats.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnShowStats.FlatAppearance.BorderSize = 0;
-            this.btnShowStats.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnShowStats.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnShowStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowStats.Location = new System.Drawing.Point(0, 40);
-            this.btnShowStats.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnShowStats.Name = "btnShowStats";
-            this.btnShowStats.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
-            this.btnShowStats.Size = new System.Drawing.Size(234, 40);
-            this.btnShowStats.TabIndex = 1;
-            this.btnShowStats.Text = "Statistiques";
-            this.btnShowStats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowStats.UseVisualStyleBackColor = true;
-            this.btnShowStats.Click += new System.EventHandler(this.btnShowStats_Click);
             // 
             // btnListPari
             // 
@@ -592,6 +552,25 @@ namespace Pari_winform
             this.status.TabIndex = 0;
             this.status.Text = "Déconnecté";
             // 
+            // btnAddAdmin
+            // 
+            this.btnAddAdmin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAddAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAddAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAddAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAdmin.Location = new System.Drawing.Point(0, 40);
+            this.btnAddAdmin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAddAdmin.Name = "btnAddAdmin";
+            this.btnAddAdmin.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
+            this.btnAddAdmin.Size = new System.Drawing.Size(234, 40);
+            this.btnAddAdmin.TabIndex = 1;
+            this.btnAddAdmin.Text = "Paramétrages";
+            this.btnAddAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddAdmin.UseVisualStyleBackColor = true;
+            this.btnAddAdmin.Click += new System.EventHandler(this.btnAddAdmin_Click);
+            // 
             // RootContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -641,14 +620,12 @@ namespace Pari_winform
         private System.Windows.Forms.Button btnListVideos;
         private System.Windows.Forms.Button btnMenuVideos;
         private System.Windows.Forms.Panel panelSubmenuPari;
-        private System.Windows.Forms.Button btnShowStats;
         private System.Windows.Forms.Button btnListPari;
         private System.Windows.Forms.Button btnMenuPari;
         private System.Windows.Forms.Panel childPanel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panelSubmenuAdministrator;
-        private System.Windows.Forms.Button btnAddAdmin;
         private System.Windows.Forms.Button btnListAdmins;
         private System.Windows.Forms.Button btnAdminMenu;
         private System.Windows.Forms.Label Login_intro;
@@ -664,5 +641,6 @@ namespace Pari_winform
         private System.Windows.Forms.Label OutputL;
         private System.Windows.Forms.Panel hints;
         private System.Windows.Forms.Label status;
+        private System.Windows.Forms.Button btnAddAdmin;
     }
 }
